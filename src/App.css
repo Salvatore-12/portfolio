@@ -28,6 +28,28 @@
   color: #61dafb;
 }
 
+.MyBiografy{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    margin-left: 100px;
+    background: linear-gradient(to right, #c8d5b9, #8fc0a9); 
+    border: 2px solid #696D7D;
+    border-radius:20px;
+    width: 700px; 
+    height: auto;
+    padding: 20px;
+}
+
+.MyBiografy p {
+  text-align: justify; 
+  margin: 0;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
