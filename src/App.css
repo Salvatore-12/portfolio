@@ -71,7 +71,7 @@
   background: linear-gradient(to right, #c8d5b9, #8fc0a9); 
   border: 2px solid #696D7D;
   border-radius:20px;
-  width: 700px; 
+  width: 1200px; 
   height: auto;
   padding: 20px;
   margin-top: 10px;
@@ -85,9 +85,10 @@
 
  .MyBiografy2 img {
   margin-right: 10px;
-  width: 50px;
+  width: 85px;
   height: auto; 
   margin-top: 60px;
+  margin-left: 20px;
 }
  
 
