@@ -60,6 +60,8 @@ const Homepage = ()=>{
          <img src={github} alt="logo" />
          
       </div>
+  <a href="https://github.com/Salvatore-12?tab=repositories">My Github</a>
+  <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
       
 
 
