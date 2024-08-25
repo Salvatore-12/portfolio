@@ -14,6 +14,8 @@ import spring from './images/spring.png'
 import intellij from './images/intellij.jpeg'
 import postman from './images/postman.png'
 import postgres from './images/postgres.png'
+import git from './images/git.png'
+import github from './images/github.png'
 
 
 
@@ -50,8 +52,16 @@ const Homepage = ()=>{
          <img src={postman} alt='logo'></img>
          <img src={postgres} alt='logo'></img>
          
-
       </div>
+
+      <div className="Skills">
+         <h3>tools of use:</h3>
+         <img src={git} alt="logo" />
+         <img src={github} alt="logo" />
+         
+      </div>
+      
+
 
    
      </>
