@@ -41,6 +41,7 @@
     height: auto;
     padding: 20px;
     margin-top: 20px;
+    margin-right: 50px;
 }
 .MyBiografy h3 {
  padding-bottom: 130px;
@@ -94,6 +95,16 @@
 
 a{
   text-decoration: none;
+}
+
+.tools{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align:center;
+  align-items: center;
 }
 
 
