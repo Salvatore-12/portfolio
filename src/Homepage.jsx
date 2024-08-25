@@ -8,6 +8,13 @@ import Vscode from './images/Vscode.png'
 import typescript from './images/ts.png'
 import react from './images/react.png'
 import redux from './images/redux.png'
+import angular from './images/angular.png'
+import java from './images/java.png'
+import spring from './images/spring.png'
+import intellij from './images/intellij.jpeg'
+import postman from './images/postman.png'
+import postgres from './images/postgres.png'
+
 
 
 
@@ -20,8 +27,8 @@ const Homepage = ()=>{
         <p>Ciao sono Salvatore Assennato,sono un full-stack-developer,ed sono disponibile a lavorare sia da remoto che ibrido,ed lavorare in gruppo.Amo fare programmazione,sono una persona ordinata ai dettagli e orientato alla risoluzione dei problemi.Dove darò il massimo del mio contributo,nei vari progetti che mi dedicherò. </p>
       </div> 
 
-      <div className="MyBiografy2">
-         <h3>front end skills:</h3>
+      <div className="Skills">
+         <h3>frontend skills:</h3>
          <img src={html} alt="logo" />
          <img src={css} alt="logo" />
          <img src={javascript} alt="logo" />
@@ -31,8 +38,21 @@ const Homepage = ()=>{
          <img src={typescript} alt='logo'></img>
          <img src={react} alt='logo'></img>
          <img src={redux} alt='logo'></img>
+         <img src={angular} alt='logo'></img>
 
       </div>
+
+      <div className="Skills">
+         <h3>backend skills:</h3>
+         <img src={java} alt="logo" />
+         <img src={spring} alt="logo" />
+         <img src={intellij} alt="logo" />
+         <img src={postman} alt='logo'></img>
+         <img src={postgres} alt='logo'></img>
+         
+
+      </div>
+
    
      </>
 

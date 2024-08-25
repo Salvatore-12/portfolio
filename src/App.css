@@ -62,7 +62,7 @@
 
 
 
-.MyBiografy2{
+.Skills{
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -77,20 +77,23 @@
   margin-top: 10px;
 }
 
-.MyBiografy2 h3 {
+.Skills h3 {
   text-align: left;
   margin-bottom: 20px;
    
  }
 
- .MyBiografy2 img {
+ .Skills img {
   margin-right: 10px;
-  width: 85px;
+  width: 70px;
   height: auto; 
   margin-top: 60px;
   margin-left: 20px;
+  border-radius: 10px;
 }
- 
+
+
+
 
 
 
