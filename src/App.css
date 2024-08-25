@@ -37,15 +37,59 @@
     background: linear-gradient(to right, #c8d5b9, #8fc0a9); 
     border: 2px solid #696D7D;
     border-radius:20px;
-    width: 700px; 
+    width: 1200px; 
     height: auto;
     padding: 20px;
+    margin-top: 20px;
+}
+.MyBiografy h3 {
+ padding-bottom: 130px;
+  
 }
 
 .MyBiografy p {
   text-align: justify; 
   margin: 0;
+  margin-top: 10px;
 }
+
+.imageProfile{
+  width:100px;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+
+
+.MyBiografy2{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align:center;
+  margin-left: 100px;
+  background: linear-gradient(to right, #c8d5b9, #8fc0a9); 
+  border: 2px solid #696D7D;
+  border-radius:20px;
+  width: 700px; 
+  height: auto;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.MyBiografy2 h3 {
+  text-align: left;
+  margin-bottom: 20px;
+   
+ }
+
+ .MyBiografy2 img {
+  margin-right: 10px;
+  width: 50px;
+  height: auto; 
+  margin-top: 60px;
+}
+ 
 
 
 
