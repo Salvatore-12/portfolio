@@ -16,6 +16,15 @@ import postman from './images/postman.png'
 import postgres from './images/postgres.png'
 import git from './images/git.png'
 import github from './images/github.png'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import petshop from './images/Petshop.png'
+import netflix from './images/netflix.png'
+import meteo from './images/meteo.png'
+
+
+
+
 
 
 
@@ -57,9 +66,57 @@ const Homepage = ()=>{
       <div className="Skills">
          <h3>tools of use:</h3>
          <img src={git} alt="logo" />
-         <img src={github} alt="logo" />
-         
+         <img src={github} alt="logo" />   
       </div>
+
+  <div className='projects'>
+  <h3>My Projects:</h3>
+      <div className='ContainerCards'>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={petshop} className="card-img-top" />
+      <Card.Body className='FontStile'>
+        <Card.Title>Pet-Shop</Card.Title>
+        <Card.Text>
+        e-commerce di oggetti per animali
+        </Card.Text>
+        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
+      </Card.Body>
+    </Card>
+    </div>
+    
+     <div className='ContainerCards'>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={netflix} className="card-img-top" />
+      <Card.Body className='FontStile'>
+        <Card.Title>Site Netflix</Card.Title>
+        <Card.Text>
+         creazione sito netflix
+        </Card.Text>
+        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
+      </Card.Body>
+    </Card>
+    </div>
+
+     <div className='ContainerCards'>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={meteo} className="card-img-top"/>
+      <Card.Body className='FontStile'>
+        <Card.Title>app Meteo</Card.Title>
+        <Card.Text>
+          applicazione per il meteo
+        </Card.Text>
+        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
+      </Card.Body>
+     </Card>    
+    </div>
+</div>
+
+
+
+
+   
+
+
       <div className='tools'>
          <a href="https://github.com/Salvatore-12?tab=repositories">My Github</a>
         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
