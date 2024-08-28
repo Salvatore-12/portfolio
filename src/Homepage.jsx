@@ -21,19 +21,32 @@ import Card from 'react-bootstrap/Card';
 import petshop from './images/Petshop.png'
 import netflix from './images/netflix.png'
 import meteo from './images/meteo.png'
-import { PDFDocument,rgb } from 'pdf-lib';
-import { saveAs } from 'file-saver';
-
-
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 
 
 
 
 const Homepage = ()=>{
-
+  const generatePDF = () => {
+    const input = document.getElementById('pdfContent');
+    html2canvas(input, { scrollY: -window.scrollY }) // Aggiungi questo parametro per includere il contenuto fuori vista
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF({
+          orientation: "portrait",
+          unit: "px",
+          format: [canvas.width, canvas.height] // Imposta le dimensioni del PDF in base alle dimensioni del canvas
+        });
+  
+        const marginTop = 20; // Imposta qui il margine superiore desiderato (in pixel)
+        pdf.addImage(imgData, 'PNG', 0, marginTop);
+        pdf.save('Myportfolio.pdf');
+      });
+  };
     return(<>
-       
+       <div id='pdfContent'>
       <div className="MyBiografy">
       <h3>Information:</h3> 
         <img src= {fotoProfilo} alt="immagine profilo" className='imageProfile' />
@@ -81,7 +94,7 @@ const Homepage = ()=>{
         <Card.Text>
         e-commerce di oggetti per animali
         </Card.Text>
-        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
+        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -94,7 +107,7 @@ const Homepage = ()=>{
         <Card.Text>
          creazione sito netflix
         </Card.Text>
-        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
+        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -107,16 +120,17 @@ const Homepage = ()=>{
         <Card.Text>
           applicazione per il meteo
         </Card.Text>
-        <Button variant="primary" className='MyBtn'><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
+        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
       </Card.Body>
      </Card>    
     </div>
-</div>
+ </div>
       <div className='tools'>
          <a href="https://github.com/Salvatore-12?tab=repositories">My Github</a>
         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
         </div>
-
+      </div>
+      <Button variant="success" className='ButtonDownload' onClick={generatePDF}>Scarica il PDF</Button>
      </>
 )
 }
