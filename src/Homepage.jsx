@@ -90,11 +90,11 @@ const Homepage = ()=>{
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={petshop} className="card-img-top" />
       <Card.Body className='FontStile'>
-        <Card.Title>Pet-Shop</Card.Title>
+        <Card.Title className='fw-bold'>Pet-Shop</Card.Title>
         <Card.Text>
-        e-commerce di oggetti per animali
+       Pet-shop per animali
         </Card.Text>
-        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
+        <Button variant="success" className='rounded-4'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -103,11 +103,11 @@ const Homepage = ()=>{
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={netflix} className="card-img-top" />
       <Card.Body className='FontStile'>
-        <Card.Title>Site Netflix</Card.Title>
+        <Card.Title className='fw-bold'>Site Netflix</Card.Title>
         <Card.Text>
-         creazione sito netflix
+         Creazione sito netflix
         </Card.Text>
-        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
+        <Button variant="success" className='rounded-4'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
     </div>
@@ -116,11 +116,11 @@ const Homepage = ()=>{
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={meteo} className="card-img-top"/>
       <Card.Body className='FontStile'>
-        <Card.Title>app Meteo</Card.Title>
+        <Card.Title className='fw-bold'>app Meteo</Card.Title>
         <Card.Text>
-          applicazione per il meteo
+       Applicazione per il meteo
         </Card.Text>
-        <Button variant="success" className='MyBtn'><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
+        <Button variant="success" className='rounded-4' ><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
       </Card.Body>
      </Card>    
     </div>
@@ -130,7 +130,9 @@ const Homepage = ()=>{
         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
         </div>
       </div>
-      <Button variant="success" className='ButtonDownload rounded-4' onClick={generatePDF}>Scarica il PDF</Button>
+      <div className='d-flex justify-content-center'>
+      <Button variant="success" className='rounded-4 mb-3 pt-3 d-flex justify-content-center align-items-center text-dark fw-bold' onClick={generatePDF}><p>Scarica il PDF</p></Button>
+      </div>
      </>
 )
 }
