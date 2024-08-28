@@ -31,16 +31,16 @@ import html2canvas from 'html2canvas';
 const Homepage = ()=>{
   const generatePDF = () => {
     const input = document.getElementById('pdfContent');
-    html2canvas(input, { scrollY: -window.scrollY }) // Aggiungi questo parametro per includere il contenuto fuori vista
+    html2canvas(input, { scrollY: -window.scrollY }) // Aggiungo questo parametro per includere il contenuto fuori vista
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF({
           orientation: "portrait",
           unit: "px",
-          format: [canvas.width, canvas.height] // Imposta le dimensioni del PDF in base alle dimensioni del canvas
+          format: [canvas.width, canvas.height] // Imposto le dimensioni del PDF in base alle dimensioni del canvas
         });
   
-        const marginTop = 20; // Imposta qui il margine superiore desiderato (in pixel)
+        const marginTop = 20; // Imposto qui il margine superiore desiderato (in pixel)
         pdf.addImage(imgData, 'PNG', 0, marginTop);
         pdf.save('Myportfolio.pdf');
       });
@@ -48,13 +48,13 @@ const Homepage = ()=>{
     return(<>
        <div id='pdfContent'>
       <div className="MyBiografy">
-      <h3>Information:</h3> 
+      <h3 className='text-black'>Information:</h3> 
         <img src= {fotoProfilo} alt="immagine profilo" className='imageProfile' />
         <p>Ciao sono Salvatore Assennato,sono un full-stack-developer,ed sono disponibile a lavorare sia da remoto che ibrido,ed lavorare in gruppo.Amo fare programmazione,sono una persona ordinata ai dettagli e orientato alla risoluzione dei problemi.Dove darò il massimo del mio contributo,nei vari progetti che mi dedicherò. </p>
       </div> 
 
       <div className="Skills">
-         <h3>frontend skills:</h3>
+         <h3 className='text-black'>frontend skills:</h3>
          <img src={html} alt="logo" />
          <img src={css} alt="logo" />
          <img src={javascript} alt="logo" />
@@ -69,7 +69,7 @@ const Homepage = ()=>{
       </div>
 
       <div className="Skills">
-         <h3>backend skills:</h3>
+         <h3 className='text-black'>backend skills:</h3>
          <img src={java} alt="logo" />
          <img src={spring} alt="logo" />
          <img src={intellij} alt="logo" />
@@ -79,61 +79,69 @@ const Homepage = ()=>{
       </div>
 
       <div className="Skills">
-         <h3>tools of use:</h3>
+         <h3 className='text-black'>tools of use:</h3>
          <img src={git} alt="logo" />
          <img src={github} alt="logo" />   
       </div>
 
-  <div className='projects'>
-  <h3>My Projects:</h3>
-      <div className='ContainerCards'>
-      <Card style={{ width: '18rem' }}>
+<div className='projects'>
+  <h3 className='mt-3 text-black'>My Projects:</h3>
+  <div className='ContainerCards'>
+    <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={petshop} className="card-img-top" />
       <Card.Body className='FontStile'>
         <Card.Title className='fw-bold'>Pet-Shop</Card.Title>
         <Card.Text>
-       Pet-shop per animali
+          Pet-shop per animali
         </Card.Text>
-        <Button variant="success" className='rounded-4'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
+         <Button variant="success" className='rounded-4'><a href="https://github.com/Salvatore-12/pet-shop-frontend.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
-    </div>
+  </div>
     
-     <div className='ContainerCards'>
-      <Card style={{ width: '18rem' }}>
+  <div className='ContainerCards'>
+    <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={netflix} className="card-img-top" />
       <Card.Body className='FontStile'>
         <Card.Title className='fw-bold'>Site Netflix</Card.Title>
         <Card.Text>
-         Creazione sito netflix
+          Creazione sito netflix
         </Card.Text>
         <Button variant="success" className='rounded-4'><a href="https://github.com/Salvatore-12/netflix-react.git">Vai alla repo</a></Button>
       </Card.Body>
     </Card>
-    </div>
+  </div>
 
-     <div className='ContainerCards'>
-      <Card style={{ width: '18rem' }}>
+  <div className='ContainerCards'>
+    <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={meteo} className="card-img-top"/>
       <Card.Body className='FontStile'>
         <Card.Title className='fw-bold'>app Meteo</Card.Title>
         <Card.Text>
-       Applicazione per il meteo
+          Applicazione per il meteo
         </Card.Text>
         <Button variant="success" className='rounded-4' ><a href="https://github.com/Salvatore-12/meteo-app.git">Vai alla repo</a></Button>
       </Card.Body>
      </Card>    
-    </div>
+  </div>
  </div>
       <div className='tools'>
          <a href="https://github.com/Salvatore-12?tab=repositories">My Github</a>
-        <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
-        </div>
+         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
       </div>
+</div>
       <div className='d-flex justify-content-center'>
-      <Button variant="success" className='rounded-4 mb-3 pt-3 d-flex justify-content-center align-items-center text-dark fw-bold' onClick={generatePDF}><p>Scarica il PDF</p></Button>
+      <Button variant="success" className='small-btn rounded-4 mb-3 me-3  d-flex justify-content-center align-items-center text-black fw-bolder fs-6' onClick={generatePDF}><p>Dowload portfolio</p></Button>
+      <Button 
+        variant="success" 
+        className=' small-btn rounded-4 mb-3  d-flex justify-content-center align-items-center text-black fw-bolder'
+        href="/Salvatore Assennato curicullum vitae1.pdf"
+         download="Salvatore_Assennato_CV.pdf"
+         >
+          <p>Dowload CV</p>
+          </Button>
       </div>
-     </>
+</>
 )
 }
 

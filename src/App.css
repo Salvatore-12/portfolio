@@ -134,8 +134,8 @@ a{
   display: flex;
   justify-content: center;
   margin-top: 60px;
-  border: 2px solid #696D7D;
-  border-radius: 10px;
+  border: 2px solid #1e1e1f;
+  border-radius: 5px;
   background:#858ba0;
 }
 
@@ -165,11 +165,23 @@ a{
 Button  a{
   width: 100%;
   text-decoration: none;
-  color: #282c34;
+  color: black;
   font-weight: bolder;
   text-align: center;
-
   
+}
+
+.small-btn {
+  padding: 0.5rem 1rem; 
+  font-size: 0.875rem; 
+  height: auto; 
+  min-width: 100px; 
+  line-height: 1.5; 
+}
+
+.small-btn p {
+  margin: 0;
+  font-size: inherit;
 }
 
 
