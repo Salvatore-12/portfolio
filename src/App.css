@@ -146,15 +146,17 @@ a{
 }
 
 .MyBtn{
+  width: 120px;
+  height: 30px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  font-weight: bolder;
+  font-size: large ;
   border-radius: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
-
-
-
 
 
 
