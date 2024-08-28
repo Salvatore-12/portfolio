@@ -1,8 +1,8 @@
-import fotoProfilo from './images/FotoProfilo.jpeg';
+import fotoProfilo from './images/FotoProfilo.png';
 import html from './images/html.png'
-import css from './images/css.jpeg'
+import css from './images/css.png'
 import javascript from './images/javascript.png'
-import bootstrap from './images/bootstrap.jpeg'
+import bootstrap from './images/bootstrap.png'
 import sass from './images/sass.png'
 import Vscode from './images/Vscode.png'
 import typescript from './images/ts.png'
@@ -11,7 +11,7 @@ import redux from './images/redux.png'
 import angular from './images/angular.png'
 import java from './images/java.png'
 import spring from './images/spring.png'
-import intellij from './images/intellij.jpeg'
+import intellij from './images/intellij.png'
 import postman from './images/postman.png'
 import postgres from './images/postgres.png'
 import git from './images/git.png'
@@ -21,9 +21,8 @@ import Card from 'react-bootstrap/Card';
 import petshop from './images/Petshop.png'
 import netflix from './images/netflix.png'
 import meteo from './images/meteo.png'
-
-
-
+import { PDFDocument,rgb } from 'pdf-lib';
+import { saveAs } from 'file-saver';
 
 
 
@@ -32,8 +31,6 @@ import meteo from './images/meteo.png'
 
 
 const Homepage = ()=>{
-
-   
 
     return(<>
        
