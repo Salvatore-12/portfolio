@@ -130,7 +130,7 @@ const Homepage = ()=>{
         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
         </div>
       </div>
-      <Button variant="success" className='ButtonDownload' onClick={generatePDF}>Scarica il PDF</Button>
+      <Button variant="success" className='ButtonDownload rounded-4' onClick={generatePDF}>Scarica il PDF</Button>
      </>
 )
 }
