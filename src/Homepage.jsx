@@ -32,22 +32,25 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Homepage = ()=>{
   const generatePDF = () => {
     const input = document.getElementById('pdfContent');
-    html2canvas(input, { scrollY: -window.scrollY }) // Aggiungo questo parametro per includere il contenuto fuori vista
-      .then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF({
-          orientation: "portrait",
-          unit: "px",
-          format: [canvas.width, canvas.height] // Imposto le dimensioni del PDF in base alle dimensioni del canvas
-        });
   
-        const marginTop = 20; // Imposto qui il margine superiore desiderato (in pixel)
-        pdf.addImage(imgData, 'PNG', 0, marginTop);
-        pdf.save('Myportfolio.pdf');
-      });
+    html2canvas(input, {
+      scrollY: -window.scrollY,
+      scrollX: 0,
+      backgroundColor: '#FAF3DD',
+      scale: 2 
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'px', [canvas.width, canvas.height]);
+  
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+  
+      pdf.save('Myportfolio.pdf');
+    });
   };
     return(<>
-       <div id='pdfContent'>
+       <div id='pdfContent'className='pt-4 pb-4'>
       <div className="MyBiografy">
       <h3 className='text-black'>Information:</h3> 
         <img src= {fotoProfilo} alt="immagine profilo" className='imageProfile' />
