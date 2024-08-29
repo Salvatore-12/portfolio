@@ -23,6 +23,7 @@ import netflix from './images/netflix.png'
 import meteo from './images/meteo.png'
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 
@@ -125,9 +126,9 @@ const Homepage = ()=>{
      </Card>    
   </div>
  </div>
-      <div className='tools'>
-         <a href="https://github.com/Salvatore-12?tab=repositories">My Github</a>
-         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/">Linkedin</a>
+      <div className='tools fs-4'>
+         <a href="https://github.com/Salvatore-12?tab=repositories" className=' me-2'><FaGithub />My Github</a>
+         <a href="https://www.linkedin.com/in/salvatore-assennato-web-developer/"><FaLinkedin />Linkedin</a>
       </div>
 </div>
       <div className='d-flex justify-content-center'>
