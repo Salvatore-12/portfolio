@@ -47,6 +47,8 @@ const Homepage = ()=>{
       pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
   
       pdf.save('Myportfolio.pdf');
+
+      document.body.classList.remove('pdf-mode');
     });
   };
     return(<>
