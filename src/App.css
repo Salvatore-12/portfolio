@@ -172,8 +172,13 @@ Button a {
 .pdf-mode #pdfContent {
   padding: 20px;
   margin: auto;
-  width: auto;
-  max-width: none;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+.pdf-mode #pdfContent img {
+  max-width: 100%;
+  height: auto;
 }
 
 

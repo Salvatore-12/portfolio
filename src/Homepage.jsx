@@ -37,10 +37,10 @@ const Homepage = ()=>{
       scrollY: -window.scrollY,
       scrollX: 0,
       backgroundColor: '#FAF3DD',
-      scale: 2 
+      scale: 2
     }).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'px', [canvas.width, canvas.height]);
+      const pdf = new jsPDF('p', 'px', [canvas.width ,canvas.height]);
   
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
