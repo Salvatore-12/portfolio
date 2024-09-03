@@ -56,11 +56,11 @@ const Homepage = ()=>{
       <div className="MyBiografy">
       <h3 className='text-black'>Information:</h3> 
         <img src= {fotoProfilo} alt="immagine profilo" className='imageProfile' />
-        <p>Ciao sono Salvatore Assennato,
-          sono un full-stack-developer,
-          ed sono disponibile a lavorare sia da remoto che ibrido,
-          ed lavorare in gruppo.Amo fare programmazione,
-          sono una persona ordinata ai dettagli e orientato alla risoluzione dei problemi.Dove darò il massimo del mio contributo,nei vari progetti che mi dedicherò. </p>
+        <p>Ciao,sono Salvatore Assennato,un
+           full-stack-developer disponibile a lavorare sia da remoto che in moalita ibrida.
+           Mi piace lavorare in gruppo e sono appassionato di programmazione.
+           Sono una persona precisa, attenta ai dettagli e orientato alla risoluzione dei problemi.
+           Sono pronto a dare il massimo in ogni progetto a cui mi dedicherò. </p>
       </div> 
 
       <div className="Skills">
