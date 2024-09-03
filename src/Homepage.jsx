@@ -145,7 +145,7 @@ const Homepage = ()=>{
       <Button 
         variant="success" 
         className=' small-btn rounded-4 mb-3  d-flex justify-content-center align-items-center text-black fw-bolder'
-        href="/Salvatore Assennato curicullum vitae1.pdf"
+        href="/Salvatore Assennato Curriculum Vitae aggiornato.pdf"
          download="Salvatore_Assennato_CV.pdf"
          >
           <p>Dowload CV</p>
